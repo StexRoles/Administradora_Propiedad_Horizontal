@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hola, esta pagina sirve</h1>
-</body>
-</html>
+<!-- PARTIAL DEL HEAD -->
+<%- include ('./partials/head', { extraFont: false, stylesheetPath: '/css/index.css' }) %>
+
+<!-- PARTIAL DEL HEADER -->
+<%- include ('./partials/header') %>
+
+<main>
+    <section>
+        <article class="banner-container">
+            <img src="/images/banner.jpg" alt="Conjunto vivamos en paz">
+        </article>
+    </section>
+
+    <section>
+        <article class="information-container">
+            <h1 class="title-index">Conjunto Residencial Vivamos en Paz</h1>
+
+            <p class="description">Vivamos en Paz es más que un conjunto residencial; es un oasis de tranquilidad y 
+                bienestar en medio del ajetreo de la ciudad. Con una arquitectura moderna y acogedora, 
+                nuestro conjunto ofrece espacios verdes exuberantes, áreas recreativas para toda la familia y una comunidad unida que promueve la convivencia armoniosa. Descubre un lugar donde la seguridad, la comodidad y la calidad de vida se encuentran en perfecta armonía. ¡Bienvenido a Vivamos en Paz, tu hogar para vivir en armonía!</p>
+        </article>
+    </section>
+</main>
+
+<!-- PARTIAL DEL FOOTER -->
+<%- include ('./partials/footer') %>

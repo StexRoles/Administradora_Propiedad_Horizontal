@@ -1,0 +1,66 @@
+/* ESTILOS DEL FOOTER */
+
+/* CONTENEDOR DEL FOOTER */
+.footer-container {
+    background-color: #F2F4F3;
+    padding: 2rem;
+}
+
+.information-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* LINKS DEL FOOTER */
+.links-footer {
+    width: 80%;
+}
+
+.links-footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links-footer ul li {
+    list-style: none;
+}
+
+.links-footer ul li a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* LOGO DEL FOOTER */
+.logo-footer {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+/* COPYRIGHT MENSAJE */
+.copyright {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+}
+
+/* LINEA DECORATIVA FOOTER */
+.line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-footer {
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    margin-top: 1rem;
+}

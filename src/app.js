@@ -4,6 +4,9 @@ const app = express();
 
 const path = require('path'); // REQUERIMOS PATH
 
+// MIDDLEWARES GLOBALES
+app.use(express.static(path.join(__dirname, '../public'))); // PARA USAR ARCHIVOS ESTATICOS
+
 // CONFIGURAR MOTOR DE PLANTILLAS ENGINE JAVA SCRIPT
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));

@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ESTILOS DEL HEADER */
+
+/* CONTENEDOR DEL HEADER */
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F2F4F3;
+    padding: 1rem;
+} 
+
+/* CONTENEDOR IMAGENES */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 30%;
+}
+
+.logotipo {
+    width: 25%;
+}
+
+/* BARRA DE NAVEGACION */
+.navbar {
+    width: 70%;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    padding: 1rem;
+    background-color: #F2F4F3;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.navbar ul li:hover {
+    background-color: #007200;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #007200;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.navbar ul li:hover a {
+    color: white;
+}
+
+/* LINEA DE DECORACION DE LA BARRA DE NAVEGACION */
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.line-nav {
+    background: linear-gradient(-45deg, #006400, #38B000, #CCFF33, #007200, #70E000 );
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    height: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 36%;
+}
