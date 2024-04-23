@@ -1,7 +1,21 @@
 // CREANDO OBJETO LITERAL CON TODOS LOS METODOS QUE SE USARAN EN LAS RUTAS
 const mainController = {
     index: (req, res) => {
+        // ENVIAMOS LA VISTA DEL INDEX
         res.render('index');
+    },
+    apartamentos: (req, res) => {
+        // ENVIAMOS LA VISTA DE APARTAMENTOS
+        res.render('apartamentos');
+    },
+    apartamentoInfo: (req, res) => {
+        // ENVIAMOS LA VISTA DE APARTAMENTOINFO
+        res.render('apartamentoInfo');
+    },
+    admin: (req, res) => {
+        // ENVIAMOS LA VISTA DE ADMIN
+        res.render('administracion');
+    
     }
 }
 

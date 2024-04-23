@@ -1,0 +1,79 @@
+/* ESTILOS DE LA VISTA DE APARTAMENTOS */
+
+main {
+    background-image: url('../images/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 3rem;
+}
+
+.title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+/* ESTILOS CONTENEDOR PRINCIPAL DE APARTAMENTOS */
+.apartment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ESTILOS DEL FORMULARIO */
+.form-container {
+    background-color: #F2F4F3;
+    border: 1px solid #ced4da;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;    
+    padding: 2rem;
+    width: 100%;
+}
+
+form label, form input, button {
+    margin: 0.5rem;
+}
+
+form input {
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: solid 3px rgba(158, 240, 26 , 0.5 );
+}
+
+form label {
+    font-weight: bold;
+}
+
+form button {
+    display: flex;
+    background-color: #007200;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    transition: all 0.3s;
+}
+
+form button:hover {
+    background-color: #005200;
+    scale: 1.05;
+}

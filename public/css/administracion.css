@@ -1,0 +1,65 @@
+/* ESTILOS DE LA VISTA DE ADMINISTRACION */
+
+main {
+    background-image: url('../images/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 3rem;
+}
+
+.title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+/* ESTILOS CONTENEDOR PRINCIPAL  */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ESTILOS DEL CONTENEDOR INFORMACION */
+.info-container {
+    background-color: #F2F4F3;
+    border: 1px solid #ced4da;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 60%;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.info-container p {
+    font-weight: bold;
+    margin: 0.8rem 0 0.8rem 0;
+    width: 50%;
+}
+
+/* ESTILOS DEL CONTENEDOR DE BOTONES */
+.admin-buttons {
+    width: 60%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.admin-buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #007200;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    height: 100%;
+    font-size: 1.15rem;
+    transition: all 0.3s;
+}
+
+.admin-buttons a:hover {
+    scale: 1.05;
+    background-color: #005200;
+}

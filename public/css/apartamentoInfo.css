@@ -1,0 +1,40 @@
+/* ESTILOS DE LA VISTA DE APARTAMENTOSINFO */
+
+main {
+    background-image: url('../images/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 3rem;
+}
+
+.title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+/* ESTILOS CONTENEDOR PRINCIPAL DE APARTAMENTOS */
+.apartment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ESTILOS DEL CONTENEDOR INFORMACION */
+.info-container {
+    background-color: #F2F4F3;
+    border: 1px solid #ced4da;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.info-container p {
+    font-weight: bold;
+    margin: 0.8rem 0 0.8rem 0;
+    width: 50%;
+}

@@ -1,0 +1,29 @@
+<!-- PARTIAL DEL HEAD -->
+<%- include ('./partials/head', { extraFont: false, stylesheetPath: '/css/apartamentos.css' }) %>
+
+<!-- PARTIAL DEL HEADER -->
+<%- include ('./partials/header') %>
+
+<main>
+    <section class="apartment-container">
+        <h1 class="title">CONSULTE SU APARTAMENTO</h1>
+
+        <article class="form-container">
+            <form action="/apartamentos" method="post">
+                <label for="bloque">Bloque:</label>
+                <input type="text" id="bloque">
+
+                <label for="piso">Piso:</label>
+                <input type="text" id="piso">
+
+                <label for="numero">Numero:</label>
+                <input type="text" id="numero">
+
+                <button type="submit">Buscar</button>
+            </form>
+        </article>
+    </section>
+</main>
+
+<!-- PARTIAL DEL FOOTER -->
+<%- include ('./partials/footer') %>
