@@ -1,8 +1,15 @@
 /* REQUERIMOS EXPRESS Y LO GUARDAMOS EN LA VARIABLE APP */
-const express = require('express');
+import express from 'express';
 const app = express();
 
-const path = require('path'); // REQUERIMOS PATH
+import path from 'path'; // REQUERIMOS PATH
+
+// CONFIGURAMOS PARA USAR dirname
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // MIDDLEWARES GLOBALES
 app.use(express.static(path.join(__dirname, '../public'))); // PARA USAR ARCHIVOS ESTATICOS
@@ -12,7 +19,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // REQUERIMOS ROUTER EN CADA VARIABLE DONDE SE USARA: APP.JS --> ROUTER --> CONTROLLER
-const mainRouter = require('./routers/mainRouter.js');
+import mainRouter from './routers/mainRouter.js';
 
 // ------------------------------- RUTAS ------------------------------------- //
 
