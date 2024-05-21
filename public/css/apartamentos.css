@@ -23,7 +23,8 @@ main {
 .form-container {
     background-color: #F2F4F3;
     border: 1px solid #ced4da;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

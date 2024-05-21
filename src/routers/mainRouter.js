@@ -1,9 +1,9 @@
 // REQUERIR EXPRESS Y USAR ROUTER
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
 // REQUERIR mainController PARA USAR SUS METODOS
-const mainController = require('../controllers/mainController.js');
+import mainController from '../controllers/mainController.js';
 
 //---------------------------------------------------------------//
 
@@ -22,4 +22,4 @@ router.get('/administracion', mainController.admin);
 
 //---------------------------------------------------------------//
 // EXPORTAR ROUTER
-module.exports = router;
+export default router;
