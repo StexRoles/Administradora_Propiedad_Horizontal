@@ -29,9 +29,9 @@
 
 .links-footer ul li a {
     text-decoration: none;
-    color: black;
+    color: #828587;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -46,7 +46,7 @@
 .copyright {
     text-align: center;
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     color: black;
 }

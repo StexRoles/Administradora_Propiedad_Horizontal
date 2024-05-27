@@ -28,12 +28,13 @@
             <p>Dirección: <span><%= conjunto.o_direccion %></span></p>
             <p>Descuento de pago: <span><%= conjunto.t_descuento %></span></p>
             <p>Tasa de mora: <span><%= conjunto.t_mora %></span></p>
+            <p>Cuota administración: <span><%= conjunto.v_base %></span></p>
 
             <% concepts.forEach(element => { %>
                 <p><%= element.n_nombre %>: <span><%= element.v_valor %></span></p>	
             <% }) %>
         </article>
-    </section>
+    </section> 
 </main>
 
 <script src="/scripts/modal.js"></script>

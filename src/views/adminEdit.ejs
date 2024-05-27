@@ -24,42 +24,40 @@
 
                         <article>
                             <label for="address">Dirección:</label>
-                            <input type="text" id="address" name="address" placeholder="Cra 15 #43" disabled>
-                        </article>
-
-                        <article>
-                            <label for="adminFee">Valor cuota administración:</label>
-                            <input type="text" id="adminFee" name="adminFee" placeholder="$25000">
+                            <input type="text" id="address" name="address" placeholder="<%= conjunto.o_direccion %>" disabled>
                         </article>
 
                         <article>
                             <label for="discount">Descuento de pago:</label>
-                            <input type="text" id="discount" name="discount" placeholder="12%">
-                        </article>
-
-                        <article>
-                            <label for="account">N° Cuenta bancaria:</label>
-                            <input type="text" id="account" name="account" placeholder="222211">
-                        </article>
-
-                        <article>
-                            <label for="limitDate">Fecha limite descuento de pago:</label>
-                            <input type="text" id="limitDate" name="limitDate" placeholder="07/06/2023">
+                            <input type="text" id="discount" name="discount" placeholder="<%= conjunto.t_descuento %>">
                         </article>
 
                         <article>
                             <label for="mora">Tasa de mora:</label>
-                            <input type="text" id="mora" name="mora" placeholder="5%">
+                            <input type="text" id="mora" name="mora" placeholder="<%= conjunto.t_mora %>">
                         </article>
 
                         <article>
-                            <label for="extra">Cuotas extraordinarias:</label>
-                            <input type="text" id="discount" name="discount" placeholder="$5000%">
+                            <label for="fee">Cuota de administración:</label>
+                            <input type="text" id="fee" name="fee" placeholder="<%= conjunto.v_base %>">
                         </article>
+
+                        <% concepts.forEach(element => { %>
+
+                            <article>
+                                <label for="extra"><%= element.n_nombre %>:</label>
+                                <input type="text" class="concepts" name="<%= element.k_concepto %>" placeholder="<%= element.v_valor %>">
+                            </article>
+
+                        <% }) %>
+                        
                     </article>
                 </form>
             </section>
         </main>
+
+        <!-- SCRIPT DE LAS VALIDACIONES -->
+        <script src="/scripts/editAdminAlert.js"></script>
 
         <!-- PARTIAL DEL FOOTER -->
         <%- include ('./partials/footer') %>

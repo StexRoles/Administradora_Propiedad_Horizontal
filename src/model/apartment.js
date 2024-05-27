@@ -1,9 +1,9 @@
 import { pool } from './connectionPostgresSQL.js';
 
 const apartment = {
-    findAll: async () => {
+    findResidents: async () => {
         try {
-            const result = await pool.query("SELECT * FROM apartamento;");
+            const result = await pool.query("SELECT DISTINCT ON (a.k_apartamento) a.k_apartamento, r.k_numeropersona FROM apartamento a LEFT JOIN residente r ON a.k_apartamento = r.k_apartamento;");
             return result.rows;
         } catch (error) {
             return error;

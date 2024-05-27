@@ -11,21 +11,16 @@
         <article class="cardsContainer">
 
             <!-- CARDS DE APARTAMENTOS -->
-            <article class="card">
-                <div>
-                    <img src="/images/apartment.png" alt="Apartamento">
-                </div>
-                
-                <p>1</p>
-            </article>
+            <% apartamentos.forEach(element => { %>
+                <article class="card <%= element.k_numeropersona? "" : "red" %>">
+                    <div>
+                        <img src="/images/apartment.png" alt="Apartamento">
+                    </div>
+                    
+                    <p><%= element.k_apartamento %></p>
+                </article>
+            <% }) %>
 
-            <article class="card">
-                <div>
-                    <img src="/images/apartment.png" alt="Apartamento">
-                </div>
-                
-                <p>2</p>
-            </article>
         </article>
     </section>
 </main>

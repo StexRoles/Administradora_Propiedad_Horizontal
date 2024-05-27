@@ -38,9 +38,13 @@ main {
     margin: 2rem;
     width: 10rem;
     border-radius: 1rem;
-    background-color: #95F16A;
+    background-color: #A1F57A;
     transition: all 0.3s ease;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.red {
+    background-color: #F57F7F;
 }
 
 .card:hover {
