@@ -19,7 +19,11 @@ VALUES ('CC', 1234567890, 'juan', NULL, 'grajales', NULL),
     ('TI', 13542148, 'salome', NULL, 'grajales', NULL),
     ('TI', 51654657, 'jose', NULL, 'garcia', NULL),
     ('TI', 18941972, 'paula', NULL, 'lugo', NULL),
-    ('TI', 21843248, 'hernando', NULL, 'nieto', NULL);
+    ('TI', 21843248, 'hernando', NULL, 'nieto', NULL),
+    ('TI', 11929291, 'daniela', NULL, 'sanchez', NULL),
+    ('TI', 10192010, 'javier', NULL, 'diaz', NULL),
+    ('TI', 20182920, 'cristancho', NULL, 'morales', 'sierra'),
+    ('TI', 10293029, 'luz', 'angela', 'peña', NULL);
 
 INSERT INTO Responsable (o_correo, o_telefono, k_tipoPersona, k_numeroPersona)
 VALUES ('juangra@gmail.com', 3174151972, 'CC', 1234567890),
@@ -135,4 +139,8 @@ VALUES ('29/08/2004', 'CC', 1234567890, 5),
     ('29/08/2014', 'TI', 13542148, 5),
     ('17/03/2015', 'TI', 51654657, 7),
     ('26/12/2020', 'TI', 18941972, 9),
-    ('16/01/2012', 'TI', 21843248, 11);
+    ('16/01/2012', 'TI', 21843248, 11),
+    ('24/01/2000', 'TI', 11929291, 6),
+    ('12/12/1980', 'TI', 10192010, 12),
+    ('23/8/2003', 'TI', 20182920, 16),
+    ('1/1/2001', 'TI', 10293029, 18);
