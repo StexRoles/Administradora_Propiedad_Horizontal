@@ -9,36 +9,46 @@
         <h1 class="title">INFORMACIÓN DE APARTAMENTO</h1>
 
         <article class="info-container">
-            <p>Bloque: 1A</p>
-            <p>Coeficiente pago administración: 5%</p>
-            <p>Piso: 2</p>
-            <p>Valor cuota de administración: $25000</p>
-            <p>Número: 3</p>
-            <p>Parqueaderos asociados: 25, 24</p>
-            <p>Tamaño: 45 m2</p>
+            <p>Bloque: <span><%= apartamento.q_bloque %></span></p>
+            <p>Coeficiente pago administración: <span><%= apartamento.v_coeficiente %></span></p>
+            <p>Piso: <span><%= apartamento.q_piso %></span></p>
+            <p>Cuota de administración: <span><%= apartamento.v_total %></span></p>
+            <p>Número: <span> <%= apartamento.k_apartamento %></span></p>
+            <p>Parqueadero asociado: <span><%= apartamento.k_parqueadero? apartamento.k_parqueadero : "Ninguno" %></span></p>
+            <p>Tamaño: <span><%= apartamento.v_area %> m2</span></p>
         </article>
 
         <h1 class="title">RESPONSABLE</h1>
 
         <article class="info-container">
-            <p>Tipo Identificación: CC</p>
-            <p>Identificación: 189222299</p>
-            <p>Correo: ejemplo@gmail.com</p>
-            <p>Nombre: Natalia Quintero</p>
-            <p>Telefono: 7787778</p>
-            <p>Genero: M</p>
+            <p>Tipo Identificación: <span><%= responsable.k_tipopersona %></span></p>
+            <p>Identificación: <span><%= responsable.k_numeropersona %></span></p>
+            <p>Correo: <span><%= responsable.o_correo %></span></p>
+            <p>Nombre: <span><%= responsable.n_nombre1 %> <%= responsable.n_nombre2? responsable.n_nombre2: "" %></span></p>
+            <p>Apellido: <span><%= responsable.n_apellido1 %> <%= responsable.n_apellido2? responsable.n_apellido2: "" %></span></p>
+            <p>Telefono: <span><%= responsable.o_telefono %></span></p>
         </article>
 
         <h1 class="title">HABITANTES</h1>
 
-        <article class="info-container">
-            <p>Tipo Identificación: CC</p>
-            <p>Identificación: 189222299</p>
-            <p>Correo: ejemplo@gmail.com</p>
-            <p>Nombre: Natalia Quintero</p>
-            <p>Telefono: 7787778</p>
-            <p>Genero: M</p>
-        </article>
+        <% habitantes.forEach(item => { %>
+            
+            <article class="info-container">
+                <p>Tipo Identificación: <span><%= item.k_tipopersona %></span></p>
+                <p>Identificación: <span><%= item.k_numeropersona %></span></p>
+                <p>Nombre: <span><%= item.n_nombre1 %> <%= item.n_nombre2? item.n_nombre2: "" %></span></p>
+                <p>Apellido: <span><%= item.n_apellido1 %> <%= item.n_apellido2? item.n_apellido2: "" %></span></p>
+            </article>
+
+        <% }) %>
+
+        <% if (habitantes.length == 0) { %>
+
+            <article class="info-container">
+                <p>No hay habitantes</p>
+            </article>
+
+        <% } %>
 
     </section>
 </main>

@@ -38,3 +38,7 @@ main {
     margin: 0.8rem 0 0.8rem 0;
     width: 50%;
 }
+
+.info-container span {
+    font-weight: 500 !important;
+}

@@ -1,5 +1,5 @@
 <!-- PARTIAL DEL HEAD -->
-<%- include ('./partials/head', { extraFont: false, stylesheetPath: '/css/apartamentos.css' }) %>
+<%- include ('./partials/head', { extraFont: false, stylesheetPath: '/css/consultarApt.css' }) %>
 
 <!-- PARTIAL DEL HEADER -->
 <%- include ('./partials/header') %>
@@ -9,16 +9,19 @@
         <h1 class="title">CONSULTE SU APARTAMENTO</h1>
 
         <article class="form-container">
-            <form action="/apartamentos" method="post">
+            <form action="/apartamentos" method="post" id="search">
 
                 <label for="numero">Numero:</label>
-                <input type="text" id="numero">
+                <input type="text" id="numero" name="id">
 
-                <button type="submit">Buscar</button>
+                <button type="submit" id="buttonSearch">Buscar</button>
             </form>
         </article>
     </section>
 </main>
+
+<!-- SCRIPT PARA LA ALERTA -->
+<script src="/scripts/consultAptAlert.js"></script>
 
 <!-- PARTIAL DEL FOOTER -->
 <%- include ('./partials/footer') %>

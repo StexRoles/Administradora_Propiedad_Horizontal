@@ -13,10 +13,13 @@ const __dirname = dirname(__filename);
 
 // MIDDLEWARES GLOBALES
 app.use(express.static(path.join(__dirname, '../public'))); // PARA USAR ARCHIVOS ESTATICOS
+app.use(express.urlencoded({extended: false})); //TOMA LOS DATOS DEL BODY
+app.use(express.json()); //TOMA LOS DATOS DEL BODY
 
 // CONFIGURAR MOTOR DE PLANTILLAS ENGINE JAVA SCRIPT
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
 
 // REQUERIMOS ROUTER EN CADA VARIABLE DONDE SE USARA: APP.JS --> ROUTER --> CONTROLLER
 import mainRouter from './routers/mainRouter.js';

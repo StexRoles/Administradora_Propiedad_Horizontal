@@ -9,9 +9,14 @@
         <h1 class="title">INFORMACIÓN CONJUNTO RESIDENCIAL</h1>
 
         <article class="admin-buttons">
-            <a href="">Consultas</a>
+            <select class="consults" onchange="location = this.value;">
+                <option value="">Consultas</option>
+                <option value="/administracion/apartamentos">Apartamentos</option>
+                <option value="http://www.bing.com">Reservas</option>
+                <option value="">Cartera</option>
+              </select>
 
-            <a href="">Editar</a>
+            <a href="/administracion/editar">Editar</a>
 
             <a href="">Agendar Salon</a>
 
@@ -19,17 +24,19 @@
         </article>
 
         <article class="info-container">
-            <p>Nombre: Vivamos en paz</p>
-            <p>Dirección: Cra 15 #43</p>
-            <p>Valor cuota de administración: $25000</p>
-            <p>Descuento de pago: 12%</p>
-            <p>N° Cuenta bancaria: 222211</p>
-            <p>Fecha limite descuento de pago: 07/06/2023</p>
-            <p>Tasa de mora: 5%</p>
-            <p>Cuotas extraordinarias: $5000</p>
+            <p>Nombre: <span>Vivamos en paz</span></p>
+            <p>Dirección: <span><%= conjunto.o_direccion %></span></p>
+            <p>Descuento de pago: <span><%= conjunto.t_descuento %></span></p>
+            <p>Tasa de mora: <span><%= conjunto.t_mora %></span></p>
+
+            <% concepts.forEach(element => { %>
+                <p><%= element.n_nombre %>: <span><%= element.v_valor %></span></p>	
+            <% }) %>
         </article>
     </section>
 </main>
+
+<script src="/scripts/modal.js"></script>
 
 <!-- PARTIAL DEL FOOTER -->
 <%- include ('./partials/footer') %>

@@ -11,13 +11,20 @@ import mainController from '../controllers/mainController.js';
 router.get('/', mainController.index);
 
 // RUTA PARA BUSCAR UN APARTAMENTO
-router.get('/apartamentos', mainController.apartamentos);
+router.get('/apartamentos', mainController.consultarApt);
+router.post('/apartamentos', mainController.searchApartamento);
 
 // RUTA PARA LA INFORMACION DE LOS APARTAMENTOS
 router.get('/apartamentos/:id', mainController.apartamentoInfo);
 
 // RUTA PARA LA ADMINISTRACION
 router.get('/administracion', mainController.admin);
+
+// RUTA PARA EDITAR DATOS DE LA ADMINISTRACION
+router.get('/administracion/editar', mainController.adminEdit);
+
+// RUTA PARA CONSULTAR LOS APARTAMENTOS
+router.get('/administracion/apartamentos', mainController.adminApartamentos);
 
 
 //---------------------------------------------------------------//

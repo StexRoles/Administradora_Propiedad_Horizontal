@@ -25,11 +25,11 @@ main {
 }
 
 .title-index {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
 }
 
 .description {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
 }

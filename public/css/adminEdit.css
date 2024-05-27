@@ -12,7 +12,7 @@ main {
     text-align: center;
 }
 
-/* ESTILOS CONTENEDOR PRINCIPAL  */
+/* ESTILOS DEL CONTENEDOR DEL FORMULARIO  */
 .admin-container {
     display: flex;
     flex-direction: column;
@@ -20,27 +20,43 @@ main {
 }
 
 /* ESTILOS DEL CONTENEDOR INFORMACION */
-.info-container {
+.edit-container {
     background-color: #F2F4F3;
     border: 1px solid #ced4da;
     margin-top: 2rem;
     margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     width: 60%;
     border-radius: 1rem;
     padding: 2rem;
 }
 
-.info-container p {
-    font-weight: bold;
-    margin: 0.8rem 0 0.8rem 0;
-    width: 50%;
+.edit-container article {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
 }
 
-.info-container span {
-    font-weight: 500 !important;
+.edit-container input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+
+.edit-container input:focus {
+    outline: solid 3px rgba(158, 240, 26 , 0.5 );
+}
+
+.edit-container label {
+    font-weight: bold;
 }
 
 /* ESTILOS DEL CONTENEDOR DE BOTONES */
@@ -51,10 +67,11 @@ main {
     justify-content: space-evenly;
 }
 
-.admin-buttons a {
+.admin-buttons a, button {
     text-decoration: none;
     color: white;
     background-color: #007200;
+    border: none;
     border-radius: 0.5rem;
     font-weight: bold;
     padding: 0.5rem;
@@ -63,23 +80,7 @@ main {
     transition: all 0.3s;
 }
 
-.admin-buttons a:hover {
+.admin-buttons a:hover, button:hover {
     scale: 1.05;
     background-color: #005200;
-}
-
-/* ESTILOS DEL BOTON DE CONSULTAS */
-.consults {
-    color: white;
-    background-color: #007200;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    border: none;
-    padding: 0.5rem;
-    height: 100%;
-    font-size: 1.15rem;
-}
-
-.consults option {
-    font-weight: bold;
 }
