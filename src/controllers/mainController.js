@@ -1,6 +1,7 @@
 import apartment from '../model/apartment.js';
 import residential from '../model/residential.js';
 import person from '../model/person.js';
+import parking from '../model/parking.js';
 
 // CREANDO OBJETO LITERAL CON TODOS LOS METODOS QUE SE USARAN EN LAS RUTAS
 const mainController = {
@@ -103,6 +104,29 @@ const mainController = {
 
         // ENVIAMOS LA VISTA DE APARTAMENTOS ADMINISTRACION
         res.render('adminApt', { apartamentos });
+    },
+    adminParqueaderos: async (req, res) => {
+
+        // TRAEMOS LOS APARTAMENTOS
+        let apartamentos = await apartment.findParking();
+
+        // TRAEMOS LOS PARQUEADEROS
+        let parqueaderos = await parking.findAll();
+
+        // ENVIAMOS LA VISTA DE PARQUEADEROS
+        res.render('parqueadero', { apartamentos, parqueaderos });
+    },
+    adminParqueaderosProcess: async (req, res) => {
+
+        // TRAEMOS LA INFORMACION DEL FORMULARIO
+        let data = req.body;
+
+        // ACTUALIZAMOS LA INFORMACION DEL PARQUEADERO
+        let update = await parking.updateParking(data.apartment, data.parking);
+
+        setTimeout(() => {
+            res.redirect('/administracion');
+        }, 1500);
     },
 }
 

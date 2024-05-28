@@ -113,7 +113,7 @@ CREATE TABLE Parqueadero
 (
 	k_parqueadero smallint NOT NULL,
 	i_tipo varchar(25) NOT NULL,	-- Tipo de parqueadero entre: INDIVIDUAL, DOBLE y DISCAPACIDAD.
-	k_apartamento smallint NOT NULL
+	k_apartamento smallint NULL
 )
 ;
 

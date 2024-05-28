@@ -1,0 +1,52 @@
+<!-- PARTIAL DEL HEAD -->
+<%- include ('./partials/head', { extraFont: false, stylesheetPath: '/css/parqueadero.css' }) %>
+
+    <!-- PARTIAL DEL HEADER -->
+    <%- include ('./partials/header') %>
+
+        <main>
+            <section>
+                <h1 class="title">ASIGNAR PARQUEADERO</h1>
+
+                <form action="/administracion/parqueaderos" method="post" class="admin-container">
+
+                    <article class="admin-buttons">
+                        <a href="/administracion">Cancelar</a>
+
+                        <button type="submit">Guardar</button>
+                    </article>
+
+                    <article class="edit-container">
+
+                        <select name="apartment" id="apartment">
+                            <option value="" disabled selected>Apartamentos</option>
+
+                            <% apartamentos.forEach(element => { %>
+                                <% if (!element.k_parqueadero) { %>
+                                    <option value="<%= element.k_apartamento %>">N° <%= element.k_apartamento %></option>
+                                <% } %>
+                            <% }) %>
+
+                        </select>
+
+                        <select name="parking" id="parking">
+                            <option value="" disabled selected>Parqueaderos disponibles</option>
+
+                            <% parqueaderos.forEach(element => { %>
+                                <% if (!element.k_apartamento) { %>
+                                    <option value="<%= element.k_parqueadero %>"><%= element.k_parqueadero %> <%= element.i_tipo %></option>
+                                <% } %>
+                                
+                            <% }) %>
+
+                        </select>
+                    </article>
+                </form>
+            </section>
+        </main>
+
+        <!-- SCRIPT DE LAS VALIDACIONES -->
+        <script src="/scripts/adminParkingAlert.js"></script>
+
+        <!-- PARTIAL DEL FOOTER -->
+        <%- include ('./partials/footer') %>

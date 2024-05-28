@@ -115,7 +115,29 @@ VALUES ('A651', 20000, 2150, 1346),
 
 INSERT INTO Parqueadero (k_parqueadero, i_tipo, k_apartamento)
 VALUES (1, 'INDIVIDUAL', 10),
-    (2, 'DOBLE', 6);
+    (2, 'DOBLE', 6),
+    (3, 'DOBLE', null),
+	(4, 'DOBLE', null),
+	(5, 'INDIVIDUAL', null),
+	(6, 'DOBLE', null),
+	(7, 'DISCAPACIDAD', null),
+	(8, 'DOBLE', null),
+	(9, 'INDIVIDUAL', null),
+	(10, 'INDIVIDUAL', null),
+	(11, 'DOBLE', null),
+	(12, 'DISCAPACIDAD', null),
+	(13, 'DOBLE', null),
+	(14, 'DISCAPACIDAD', null),
+	(15, 'INDIVIDUAL', null),
+	(16, 'DISCAPACIDAD', null),
+	(17, 'DOBLE', null),
+	(18, 'DISCAPACIDAD', null),
+	(19, 'INDIVIDUAL', null),
+	(20, 'DOBLE', null),
+	(21, 'INDIVIDUAL', null),
+	(22, 'DOBLE', null),
+	(23, 'DOBLE', null),
+	(24, 'INDIVIDUAL', null);
 
 INSERT INTO ZonaComun (k_zonaComun, i_tipo, v_costo, q_numeroDias, k_conjunto)
 VALUES ('SALON 1', 'SALON', 20000, 30, 11111),

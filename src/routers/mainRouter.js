@@ -27,6 +27,10 @@ router.post('/administracion/editar', mainController.adminEditProcess);
 // RUTA PARA CONSULTAR LOS APARTAMENTOS
 router.get('/administracion/apartamentos', mainController.adminApartamentos);
 
+// RUTA PARA ASIGNAR PARQUEADEROS
+router.get('/administracion/parqueaderos', mainController.adminParqueaderos);
+router.post('/administracion/parqueaderos', mainController.adminParqueaderosProcess);
+
 
 //---------------------------------------------------------------//
 // EXPORTAR ROUTER

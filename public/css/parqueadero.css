@@ -1,0 +1,83 @@
+/* ESTILOS DE LA VISTA DE ADMINISTRACION */
+
+main {
+    background-image: url('../images/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 3rem;
+}
+
+.title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+/* ESTILOS DEL CONTENEDOR DEL FORMULARIO  */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ESTILOS DEL CONTENEDOR INFORMACION */
+.edit-container {
+    background-color: #F2F4F3;
+    border: 1px solid #ced4da;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.edit-container article {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.edit-container select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+
+.edit-container select:focus {
+    outline: solid 3px rgba(158, 240, 26 , 0.5 );
+}
+
+/* ESTILOS DEL CONTENEDOR DE BOTONES */
+.admin-buttons {
+    width: 60%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.admin-buttons a, button {
+    text-decoration: none;
+    color: white;
+    background-color: #007200;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    height: 100%;
+    font-size: 1.15rem;
+    transition: all 0.3s;
+}
+
+.admin-buttons a:hover, button:hover {
+    scale: 1.05;
+    background-color: #005200;
+}
